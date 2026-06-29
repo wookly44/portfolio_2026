@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-2026-q8dxk4sfu-wookly44s-projects.vercel.app/sitemap.xml
