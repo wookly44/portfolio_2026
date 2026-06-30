@@ -7,7 +7,7 @@ function GridCard({projects, onSelect}) {
   return (
     <Stagger className="grid md:grid-cols-3 gap-6">
       {projects.map((project) => (
-        <StaggerItem key={project.id} className="group card flex flex-col h-full">
+        <StaggerItem key={project.id} className="group card flex flex-col h-full hover-lift">
           <div className="relative aspect-[2/1] overflow-hidden shrink-0">
             <img
               src={project.image}
