@@ -13,7 +13,7 @@ function ExperienceModal({project, onClose}) {
         <p className="text-xs text-text-muted mt-2">{project.period}</p>
       </div>
       {/* Content */}
-      <div className="mb-6">
+      <div className="mb-6 pr-2 overflow-y-auto max-h-[60vh]">
         {project.image && (
           <div className="w-full h-50 border border-border rounded-xl overflow-hidden mb-4">
             <img
@@ -26,7 +26,9 @@ function ExperienceModal({project, onClose}) {
             />
           </div>
         )}
-        <p className="leading-relaxed text-text-muted text-sm mb-3">{project.detail}</p>
+        <p className="leading-relaxed text-text-muted text-sm mb-3 whitespace-pre-wrap">
+          {project.detail}
+        </p>
         <div className="flex flex-wrap gap-1">
           {project.tags.map((tag) => (
             <Badge

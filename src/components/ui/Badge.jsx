@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 const SIZES = {
-  sm: 'px-2.5 py-0.5 text-label',
+  sm: 'px-2.5 py-1 text-label',
   md: 'px-3 py-1.5 text-xs',
   lg: 'px-2.5 py-2.5 text-[13px]',
 };

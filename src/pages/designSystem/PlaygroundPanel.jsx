@@ -4,7 +4,6 @@ import MetaPanel from './MetaPanel';
 import ButtonPreview from './designPreviews/ButtonPreview';
 import ModalPreview from './designPreviews/ModalPreview';
 import TabsPreview from './designPreviews/TabsPreview';
-import AccordionPreview from './designPreviews/AccordionPreview';
 import FormPreview from './designPreviews/FormPreview';
 import ThemePreview from './designPreviews/ThemePreview';
 import ToastPreview from './designPreviews/ToastPreview';
@@ -12,11 +11,10 @@ import ToastPreview from './designPreviews/ToastPreview';
 const PREVIEWS = {
   button: ButtonPreview,
   modal: ModalPreview,
-  tabs: TabsPreview,
-  accordion: AccordionPreview,
-  form: FormPreview,
   theme: ThemePreview,
   toast: ToastPreview,
+  // form: FormPreview,
+  // tabs: TabsPreview,
 };
 
 const DOT_COLORS = ['bg-point-red', 'bg-point-yellow', 'bg-point-green'];

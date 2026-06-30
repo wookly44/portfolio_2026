@@ -1,9 +1,6 @@
 import {useState, useEffect, useCallback} from 'react';
 import clsx from 'clsx';
 
-import logo_dark from '@/assets/images/logo_dark.webp';
-import logo_light from '@/assets/images/logo_light.webp';
-
 import HeaderNav from './HeaderNav';
 import HeaderActions from './HeaderActions';
 import MobileMenu from './MobileMenu';

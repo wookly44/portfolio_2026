@@ -1,8 +1,5 @@
 @import 'tailwindcss';
 
-/* ─── WEB FONTS ─────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@100..800&display=swap');
-
 /* ─── DESIGN TOKENS ──────────────────────────────────── */
 :root {
   /* brand */
@@ -100,11 +97,10 @@
   --color-point-green: #28c840;
   --color-point-red: #ff5f57;
   --color-point-yellow: #ffbd2e;
+  --color-point-pink: #f472b6;
 
   /* Typography */
   --font-Pretendard: 'Pretendard', sans-serif;
-  --font-outfit: 'Outfit', sans-serif;
-
   --text-label: 10px;
 
   /* Shadow */
@@ -114,7 +110,7 @@
 
   /* Layout */
   --container: 1280px;
-  --padding-section: 96px;
+  --padding-section: 66px;
 
   /* Motion */
   --ease-standard: 0.2s ease;
@@ -162,8 +158,7 @@
   }
 
   body {
-    @apply bg-bg text-text;
-    font-family: Sora, sans-serif;
+    @apply bg-bg text-text font-Pretendard leading-none;
     transition:
       background-color var(--ease-standard),
       color var(--ease-standard);
@@ -193,13 +188,14 @@
   }
 
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
   }
   ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--neutral-200);
+    border-radius: 20px;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-brand-active rounded-xl;
+    @apply bg-brand rounded-xl;
   }
   ::selection {
     @apply bg-brand text-text-inverse;
@@ -215,7 +211,7 @@
 }
 
 @utility split {
-  /* 기본: 2컬럼, 섹션별로 lg:grid-cols-[...] 로 override 사용 */
+  /* 기본: 2컬럼, 섹션별로 lg:grid-cols-[...] 사용 */
   @apply grid gap-8 lg:grid-cols-2;
 }
 
@@ -264,15 +260,10 @@
   }
 
   .card {
-    @apply flex bg-surface border border-border rounded-xl overflow-hidden transition-base;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card);
-    border-color: var(--color-border-focus);
+    @apply flex bg-surface border border-border rounded-xl overflow-hidden transition-base hover:-translate-y-1 hover:shadow-card hover:border-border-focus;
   }
   .card-tit {
-    @apply text-lg lg:text-2xl font-bold group-hover:text-text-accent;
+    @apply text-lg font-bold group-hover:text-text-accent;
   }
   .card-txt {
     @apply text-sm text-text-muted leading-relaxed;
@@ -304,8 +295,8 @@
 }
 
 /* ─── ANIMATE ──────────────────────────────────────── */
-.hover-lift:hover {
-  transform: translateY(-2px);
+.hover-lift {
+  @apply hover:-translate-y-2;
 }
 /* ─── KEYFRAMES ──────────────────────────────────────── */
 @keyframes fadeSlideDown {
