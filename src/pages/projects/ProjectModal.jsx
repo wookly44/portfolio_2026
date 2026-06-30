@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 
 const styles = {
-  title: 'text-2xl font-bold text-text-inverse',
+  title: 'text-2xl font-bold text-text',
   subtitle: 'text-xs font-bold tracking-widest mb-3',
   content: 'text-sm text-text-muted leading-tight',
   metaLabel: 'text-label mb-0.5',
