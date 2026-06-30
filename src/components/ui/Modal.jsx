@@ -14,7 +14,6 @@ const MODAL_STYLES = {
   backdrop: 'fixed inset-0 z-50 size-full flex-center bg-[var(--alpha-black-50)] backdrop-blur-sm',
   box: 'relative rounded-2xl bg-surface border border-border shadow-2xl overflow-hidden mx-2 w-full',
   close: 'absolute top-4 right-4 z-10',
-  scroll: 'overflow-y-auto max-h-[80vh]',
 };
 
 const FOCUSABLE = [
@@ -26,7 +25,7 @@ const FOCUSABLE = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(', ');
 
-function Modal({size = 'md', closeStyle = 'soft', scrollable, className, children, onClose}) {
+function Modal({size = 'md', closeStyle = 'soft', className, children, onClose}) {
   const boxRef = useRef(null);
 
   useEffect(() => {
@@ -78,12 +77,7 @@ function Modal({size = 'md', closeStyle = 'soft', scrollable, className, childre
         role="dialog"
         aria-modal="true"
         aria-label="모달"
-        className={clsx(
-          MODAL_STYLES.box,
-          MODAL_SIZES[size],
-          scrollable && MODAL_STYLES.scroll,
-          className,
-        )}
+        className={clsx(MODAL_STYLES.box, MODAL_SIZES[size], className)}
         onClick={(e) => e.stopPropagation()}
       >
         <Button

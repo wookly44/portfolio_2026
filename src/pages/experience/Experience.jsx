@@ -16,7 +16,7 @@ function Experience() {
     <section id="experience" className="section-py">
       <div className="inner">
         <SectionHeader number="03" label="Experience" />
-        <div className="split lg:grid-cols-[2fr_3fr]">
+        <div className="split lg:grid-cols-[1fr_2fr]">
           <FadeLeft>
             <h2 className="section-title">Professional Journey</h2>
             <p className="section-desc">
