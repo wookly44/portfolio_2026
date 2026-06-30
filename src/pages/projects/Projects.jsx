@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {PROJECT_DATA, PROJECT_FILTERS} from '@/data/projects';
 import {FadeUp, FadeLeft} from '@/components/ui/Motion';
+import {ArrowIcon} from '@/components/ui/Icons';
 
 import SectionHeader from '@/components/ui/SectionHeader';
 import FilterTabs from '@/components/ui/FilterTabs';
@@ -8,7 +9,6 @@ import FeaturedCard from './FeaturedCard';
 import GridCard from './GridCard';
 import ProjectModal from './ProjectModal';
 import Button from '@/components/ui/Button';
-import {ArrowIcon} from '@/components/ui/Icons';
 
 const INITIAL_SHOW = 6;
 

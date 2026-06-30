@@ -17,7 +17,7 @@ function DesignSystem() {
       <div className="inner">
         {/* Header */}
         <SectionHeader number="04" label="Component System" />
-        <div className="split mb-10">
+        <div className="split items-end mb-10">
           <FadeLeft>
             <h2 className="section-title">Design System</h2>
             <p className="section-desc">
@@ -35,7 +35,7 @@ function DesignSystem() {
           </FadeUp>
         </div>
         {/* Playground */}
-        <div className="grid gap-4 lg:grid-cols-[220px_1fr] lg:min-h-[600px]">
+        <div className="grid gap-4 lg:grid-cols-[220px_1fr]">
           <PlaygroundSidebar active={active} onSelect={setActive} />
           <PlaygroundPanel item={current} />
         </div>
