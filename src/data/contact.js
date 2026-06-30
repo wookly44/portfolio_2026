@@ -8,10 +8,10 @@ export const INFOS = [
 ];
 
 export const LIGHTHOUSE = [
-  {score: 82, label: 'Performance'},
+  {score: 100, label: 'Performance'},
   {score: 96, label: 'Accessibility'},
-  {score: 92, label: 'SEO'},
-  {score: 96, label: 'Best Practices'},
+  {score: 100, label: 'SEO'},
+  {score: 100, label: 'Best Practices'},
 ];
 
 export const SOCIAL_LINKS = [
